@@ -19,4 +19,4 @@ MonoBehaviour:
   _restingStateConfig:
     _restingDuration: 4
   _workingStateConfig:
-    _workingDuration: 2
+    _workingDuration: 0.1
