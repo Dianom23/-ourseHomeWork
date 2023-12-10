@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Assets.Visitor
+namespace HomeWork3.Exercise4
 {
     public interface IEnemyDeathNotifier
     {

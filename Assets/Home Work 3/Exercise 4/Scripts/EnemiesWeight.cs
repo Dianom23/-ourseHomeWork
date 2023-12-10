@@ -1,39 +1,41 @@
-using Assets.Visitor;
 using UnityEngine;
 
-public class EnemiesWeight
+namespace HomeWork3.Exercise4
 {
-    private IEnemyCreateNotifier _enemyCreateNotifier;
-    private EnemyVisitor _enemyVisitor;
-
-    public EnemiesWeight(IEnemyCreateNotifier enemyCreateNotifier)
+    public class EnemiesWeight
     {
-        _enemyCreateNotifier = enemyCreateNotifier;
-        _enemyCreateNotifier.CreateEnemyNotified += OnCreatedEnemy;
+        private IEnemyCreateNotifier _enemyCreateNotifier;
+        private EnemyVisitor _enemyVisitor;
 
-        _enemyVisitor = new EnemyVisitor();
-    }
+        public EnemiesWeight(IEnemyCreateNotifier enemyCreateNotifier)
+        {
+            _enemyCreateNotifier = enemyCreateNotifier;
+            _enemyCreateNotifier.CreateEnemyNotified += OnCreatedEnemy;
 
-    ~EnemiesWeight() => _enemyCreateNotifier.CreateEnemyNotified -= OnCreatedEnemy;
+            _enemyVisitor = new EnemyVisitor();
+        }
 
-    public int Value => _enemyVisitor.Weight;
+        ~EnemiesWeight() => _enemyCreateNotifier.CreateEnemyNotified -= OnCreatedEnemy;
 
-    private void OnCreatedEnemy(Enemy enemy)
-    {
-        _enemyVisitor.Visit(enemy);
-        Debug.Log($"Вес: {Value}");
-    }
+        public int Value => _enemyVisitor.Weight;
 
-    private class EnemyVisitor : IEnemyVisitor
-    {
-        public int Weight { get; private set; }
+        private void OnCreatedEnemy(Enemy enemy)
+        {
+            _enemyVisitor.Visit(enemy);
+            Debug.Log($"Вес: {Value}");
+        }
 
-        public void Visit(Ork ork) => Weight += 3;
+        private class EnemyVisitor : IEnemyVisitor
+        {
+            public int Weight { get; private set; }
 
-        public void Visit(Human human) => Weight += 2;
+            public void Visit(Ork ork) => Weight += 3;
 
-        public void Visit(Elf elf) => Weight += 1;
+            public void Visit(Human human) => Weight += 2;
 
-        public void Visit(Enemy enemy) => Visit((dynamic)enemy);
+            public void Visit(Elf elf) => Weight += 1;
+
+            public void Visit(Enemy enemy) => Visit((dynamic)enemy);
+        }
     }
 }

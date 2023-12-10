@@ -1,7 +1,9 @@
-using Assets.Visitor;
 using System;
 
-public interface IEnemyCreateNotifier
+namespace HomeWork3.Exercise4
 {
-    event Action<Enemy> CreateEnemyNotified;
+    public interface IEnemyCreateNotifier
+    {
+        event Action<Enemy> CreateEnemyNotified;
+    }
 }

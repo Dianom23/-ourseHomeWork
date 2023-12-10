@@ -1,9 +1,10 @@
-﻿using System;
+﻿using HomeWork3.Exercise4;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Visitor
+namespace HomeWork3.Exercise4
 {
     public class Spawner: MonoBehaviour, IEnemyDeathNotifier, IEnemyCreateNotifier
     {

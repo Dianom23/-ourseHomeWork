@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Assets.Visitor
+namespace HomeWork3.Exercise4
 {
     [CreateAssetMenu(fileName = "VisitorEnemyFactory", menuName = "Factory/VisitorEnemyFactory")]
     public class EnemyFactory: ScriptableObject

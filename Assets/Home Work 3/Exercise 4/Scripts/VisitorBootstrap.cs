@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using HomeWork3.Exercise4;
+using UnityEngine;
 
-namespace Assets.Visitor
+namespace HomeWork3.Exercise4
 {
     public class VisitorBootstrap: MonoBehaviour
     {

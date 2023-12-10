@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Visitor
+namespace HomeWork3.Exercise4
 {
     public class Score
     {

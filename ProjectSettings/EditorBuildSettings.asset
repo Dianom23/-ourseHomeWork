@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Home Work 4/Exercise 3/Scene/LevelSelectionRule.unity
+    guid: 9826e03d4148b3a4590468dd22cd5505
+  - enabled: 1
+    path: Assets/Home Work 4/Exercise 3/Scene/GameplayScene.unity
+    guid: 68adc2901c8383b4d91789cb7ea8a38b
   m_configObjects: {}
